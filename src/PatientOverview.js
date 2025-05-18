@@ -80,7 +80,6 @@ const mockPatients = [
 
 const PatientOverview = () => {
   const [expandedRows, setExpandedRows] = useState([]);
-  const [selectedPatient, setSelectedPatient] = useState(null);
 
   const columns = [
     {
@@ -229,7 +228,6 @@ const PatientOverview = () => {
                   expandedRowKeys: expandedRows,
                   onExpand: (expanded, record) => {
                     setExpandedRows(expanded ? [record.key] : []);
-                    setSelectedPatient(expanded ? record : null);
                   },
                 }}
               />
